@@ -1,0 +1,29 @@
+server:
+  port: 8000
+
+spring:
+  mvc.view:
+    prefix: /
+    suffix: .html
+  jpa:
+    hibernate:
+      ddl-auto: update
+  datasource:
+    url: jdbc:mysql://localhost:3306/blog
+    username: root
+    password: password
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: Asia/Kathmandu
+    default-property-inclusion: non_null
+    serialization:
+      INDENT_OUTPUT: false
+
+springdoc:
+  api-docs:
+    path: /api-docs
+app:
+  header: Authorization
+  secret: secretkey_123456789
+  expiration: 150000
